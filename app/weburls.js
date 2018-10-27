@@ -270,8 +270,8 @@ function startCrawl(startURLHref){
             var allExternalURLs = [];
             $('a').each(function(i, link){
                 var href = $(link).attr('href');
-                console.log(href);
-                if(href && href.length > 0){
+                if(href && href.length > 0 && href.indexOf("http") != -1){
+                    console.log(href);
                     var myURL = url.parse(href);
                     myUrl = url.parse(myURL);
 
